@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+.page {
+  font-family: var(--Inter);
+}
+
 body {
   margin: 0;
 }
