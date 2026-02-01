@@ -37,7 +37,6 @@
   --floppy-size: 21px;
   --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
   --save-button-width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
- 
 
   --block-margin: 0 auto 50px;
   --header-marign-bottom: clamp(6.125rem, 5.8404rem + 0.6826vw, 6.25rem);
