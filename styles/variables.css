@@ -29,6 +29,9 @@
   --main-border: 2px rgba(0, 0, 0, 1) solid;
   --button-shadow: 2px 2px 0 black;
   --button-text-hover: white;
+  --animation-fill-color: red;
+  --animation-fill-transparent: transparent;
+  --animation-fill-countour: black;
 
   --img-width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   --floppy-size: 21px;
