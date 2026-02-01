@@ -14,8 +14,9 @@
   flex-direction: column;
   align-items: center;
   font-family: var(--Inter);
-  background-image: var(--background-gradient-vertical),
-    var(--background-gradient-horizontal), var(--background-gradient-base);
+  background-image:
+    var(--background-gradient-vertical), var(--background-gradient-horizontal),
+    var(--background-gradient-base);
   background-repeat: no-repeat;
   background-position: fixed;
   background-size: cover;
@@ -36,6 +37,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  margin-top: 100px;
   margin-bottom: var(--header-marign-bottom);
   padding: var(--header-padding);
 }
@@ -56,6 +58,39 @@
   width: var(--img-width);
 }
 
+/* CДЕЛАТЬ, КОГДА ВСТАВЛЮ СВОЙ КОНТЕНТ
+.bright-filter {
+  filter: brightness(150%);
+}
+
+.desaturate-filter {
+  filter: saturate(70%);
+}
+
+.hue-rotate-filter {
+  filter: hue-rotate(-90deg);
+}
+
+.contrast-filter {
+  filter: contrast(130%);
+}
+
+.blur-filter {
+  filter: blur(0.1rem);
+}
+
+.invert-filter {
+  filter: invert(0.2);
+}
+
+.saturate-contrast-filter {
+  filter: saturate(150%) contrast(130%);
+}
+
+.sepia-filter {
+  filter: sepia(0.3);
+} */
+
 .image-wrapper {
   position: relative;
   display: inline-block;
@@ -67,7 +102,11 @@
   right: 25px;
   opacity: 50%;
   font-family: var(--PressStart2P);
-  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+  text-shadow:
+    -1px 0 #fff,
+    0 1px #fff,
+    1px 0 #fff,
+    0 -1px #fff;
   mix-blend-mode: hard-light;
 }
 
@@ -88,6 +127,8 @@
 
 .card-text {
   padding: var(--card-text-padding);
+  font-family: var(--Inter);
+  font-size: var(--font-size-main);
 }
 
 .card-text-extra {
@@ -95,21 +136,55 @@
 }
 
 .button {
-  /*ALL BUTTON RESET*/
   margin: 0;
-
   padding: var(--button-padding);
-
   color: inherit;
   font-family: var(--PressStart2P);
   font-weight: var(--font-weight-button);
   font-size: var(--font-size-button);
   background: inherit;
+  cursor: pointer;
+}
+
+.animated__button {
+  position: relative;
+}
+
+.animated__button::before {
+  display: block;
+  content: "";
+  position: absolute;
+  inset: 0 0;
+  inline-size: 100%;
+  block-size: 100%;
+  transform: scale(0, 1);
+  transform-origin: 0 0;
+  transition: 0.5s ease-in-out;
+  background-color: black;
+}
+
+.animated__button:hover::before {
+  transform: scale(1, 1);
+}
+
+.animated__button:hover .button__text {
+  color: var(--button-text-hover);
+  transition: 0.1s step-start;
+  mix-blend-mode: difference;
+}
+
+.save-button:hover .floppy-icon {
+  mix-blend-mode: difference;
+  fill: var(--button-text-hover);
+  transition: 0.5s step-start;
 }
 
 .button__text {
-    text-wrap: nowrap;
-  }
+  align-self: center;
+  text-wrap: nowrap;
+  position: relative;
+  z-index: 1;
+}
 
 .button-group {
   display: flex;
@@ -121,11 +196,29 @@
 .card__icon-button {
   border: none;
   padding: 0;
+  transition: border 0.3s ease;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: var(--main-border);
+  outline: none;
 }
 
 .card__like-button {
   margin-left: 7px;
   border: var(--main-border);
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus-visible {
+  /*проверить, чтобы не было белого аутлайна*/
+  box-shadow: var(--button-shadow);
 }
 
 .floppy-icon {
@@ -135,14 +228,15 @@
 
 .save-button-block {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto 100px;
   width: var(--save-button-width);
+  margin: 0 auto 100px;
 }
 
 .save-button {
+  --button-padding: 17px 20px;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  gap: 8px;
   background-color: var(--card-background);
 }
 
@@ -180,10 +274,8 @@ dialog .floppy-icon {
 
 @media (width <= 375px) {
   .save-button {
-    --button-padding: 17px 20px;
-    display: grid;
+    grid-template-columns: none;
     grid-template-rows: min-content min-content;
-    gap: 8px;
   }
 
   .floppy-icon {

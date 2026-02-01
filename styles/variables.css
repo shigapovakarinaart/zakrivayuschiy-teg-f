@@ -25,20 +25,24 @@
     #e7e7e7 0.01%,
     #1a1a1a 100%
   );
+  --card-background: white;
+  --main-border: 2px rgba(0, 0, 0, 1) solid;
+  --button-shadow: 2px 2px 0 black;
+  --button-text-hover: white;
 
   --img-width: clamp(23.1875rem, 16.0352rem + 30.5164vw, 43.5rem);
   --floppy-size: 21px;
-
-  --card-background: white;
-  --main-border: 2px rgba(0, 0, 0, 1) solid;
   --block-width: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --save-button-width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+ 
+
   --block-margin: 0 auto 50px;
-  --header-padding: clamp(1rem, -1.3437rem + 10vw, 7.6563rem)
-    clamp(1rem, -1.3437rem + 10vw, 7.6563rem);
   --header-marign-bottom: clamp(6.125rem, 5.8404rem + 0.6826vw, 6.25rem);
+  --button-margin: 25px;
+
+  --header-padding: clamp(7.625rem, 6.4868rem + 2.7304vw, 8.125rem)
+    clamp(1rem, -1.3437rem + 10vw, 7.6563rem);
   --card-header-padding: 4px 10px;
   --card-text-padding: 25px;
-  --button-margin: 25px;
   --button-padding: 10.5px 35px;
-  --save-button-width: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
