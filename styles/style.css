@@ -78,7 +78,6 @@
 .image-wrapper {
   position: relative;
   display: inline-block;
-  padding-bottom: 25px;
   border-top: var(--img-border);
   border-bottom: var(--img-border);
 }
@@ -118,6 +117,10 @@
   padding: var(--card-text-padding);
   font-family: var(--Inter);
   font-variation-settings: "wght" var(--font-size-main);
+}
+
+.card-text:nth-of-type(2) {
+  padding-top: 0;
 }
 
 .button {

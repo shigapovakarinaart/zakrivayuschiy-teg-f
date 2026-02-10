@@ -46,7 +46,7 @@
   --header-padding: clamp(7.625rem, 6.4868rem + 2.7304vw, 8.125rem)
     clamp(1rem, -1.3437rem + 10vw, 7.6563rem);
   --card-header-padding: 4px 10px;
-  --card-text-padding: 0 25px 25px 25px;
+  --card-text-padding: 25px 25px 25px 25px;
   --button-padding: 10.5px 35px;
   --dialogue-padding: 30px;
 }
