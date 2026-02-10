@@ -1,6 +1,6 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --PressStart2P: "PressStart2P", sans-serif;
+  --PressStart2P: "PressStart2P", fantasy;
   --Inter: "Inter", sans-serif;
   --font-weight-main: 410;
   --font-weight-card-header: 715;
@@ -29,7 +29,7 @@
   --main-border: 2px rgba(0, 0, 0, 1) solid;
   --img-border: 2px rgba(0, 0, 0, 1) solid;
   --button-shadow: 2px 2px 0 black;
-  --button-text-hover: white;
+  --button-hover: white;
   --animation-fill-color: red;
   --animation-fill-transparent: transparent;
   --animation-fill-countour: black;
